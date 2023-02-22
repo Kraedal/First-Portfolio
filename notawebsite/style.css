@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
 }
 .flex{
     display: flex;
@@ -13,6 +17,7 @@
 }
 ::-webkit-scrollbar{
     width: 5px;
+    
 }
 ::-webkit-scrollbar-track {
     background: #f0d1f7;
@@ -197,14 +202,21 @@
     margin: 2rem 1rem 1rem 1rem;
     text-align: center;
     background: none;
+    animation: progressBar 3s ease-in-out;
 }
 
 .skill progress::-webkit-progress-value {
     background: rgb(180, 219, 255);
+    animation: progressBar 3s ease-in-out backwards;
   }
 .skill progress::-webkit-progress-bar {
     background: rgb(235, 219, 232);
   }
+  @keyframes progressBar {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+ 
 .skill h3{
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
@@ -239,7 +251,7 @@
     border-bottom: #d5b0d8 2px dashed;
     cursor: default;
 }
-.box2 {
+.first-row{
     display: inline-block;
     width: 25%;
     height: 25%;
@@ -249,22 +261,43 @@
     vertical-align: top;
     
   }
- .box2 img{
+  .first-row img{
     height: 100%;
     width: 100%;
-    border-radius: 5%;
-    transition: ease-in-out 0.5s;
-
- } 
- .box2 p{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 10;
+} 
+ .first-row p{
+    font-family: 'Pacifico', cursive;
     font-size: 18px;
-    color: var(--color,rgb(131, 125, 130));
+    height: 100%;
+    width: 100%;
+    color: var(--color,rgb(0, 0, 0));
     text-align: center;
     cursor: default;
     
  }
+ .second-row{
+    display: inline-block;
+    width: 25%;
+    height: 25%;
+    margin: 3rem;
+    margin:0 0rem 0 13rem;
+    padding: 2rem;
+    text-align: center;
+    vertical-align: top;
+  }
+  .second-row img{
+    height: 100%;
+    width: 100%;
+ } 
+ .second-row p{
+    font-family: 'Pacifico', cursive;
+    font-weight: 10;
+    font-size: 18px;
+    color: var(--color,rgb(0, 0, 0));
+    text-align: center;
+    cursor: default;
+ }
+
  .nothing{
     background-color: #eed1f0;
     background-repeat: no-repeat;
@@ -356,4 +389,14 @@
     font-size: 30px;
     margin-bottom: 1rem;
     text-align: left;
+}
+.hidden{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
 }

@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/594d25dddc.js" crossorigin="anonymous"></script>
+    <script defer src="java.js"></script>
 </head>
 <body>
     
@@ -41,15 +42,15 @@
         </header>
     <div class="background">
             <img src="image/purp.png" alt="background">
-            <h2>Welcome to my Site!</h2>
-            <p>A not so interactive website</p>
+            <h2 class="hidden">Welcome to my Site!</h2>
+            <p class="hidden">A not so interactive website</p>
     </div>
     <p id="about" class="filler"></p>
-    <div class="title">
+    <div class="title hidden">
        <h1>ABOUT ME</h1>
     </div>
     <div>
-        <div class="about">
+        <div class="about hidden">
             <img src="image/me.jpg" alt="me">
             <h3>Jacob S. Ong</h3>
             <h5>BSCS-2</h5>
@@ -59,13 +60,13 @@
                 <li><i class="fa-solid fa-envelope"></i> 1502032@usl.edu.ph</li>
             </ul>
         </div>
-        <div class="about-me">
+        <div class="about-me ">
             <img src="image/mori.gif" alt="mori">
             <p>First of all, thank you for visiting my website. My name is Jacob Soriano Ong, currently studying Computer Science at the University of Saint Louis Tuguegarao. I love music and when there is time, I write poems and draw things. I started this course because I looked up computers since I was little, and now that I am old, technology keeps evolving and evolving. Although this was not my priority when entering college, Architecture was my priority. I did not receive any emails or calls from the University where I enrolled and proceeded to pursue Computer Science. I want to be a full-stack developer or Software engineer in the future and heard that you need to study Computer Science/IT to become one(although not totally). Five years from now, I can see myself either struggling in debugging or landing a job, but who knows what will happen in the future because I wanted to be an astronaut when I was like... seven years old.  </p>
         </div>
     </div>
     <div class="skill">
-       <h2 class="title">SKILLS</h2>
+       <h2 class="title hidden">SKILLS</h2>
         <h3>Creativity</h3>
         <progress value="79" max="100">60</progress>
         <p>I am a creative person, I like to imagine things, on how they operate and on how things work. I also like to experiment things that is why I rated myself that way.</p>
@@ -83,39 +84,37 @@
         <p>I rated my critical thinking this way because I always plan before I do things, on how things can greatly affect any decision made by me and on how I can benefit from those decisions.</p>
     </div>
     <div class="education">
-        <h2 class="title">EDUCATIONAL BACKGROUND</h2>
-        <div class="box2">
+        <h2 class="title hidden">EDUCATIONAL BACKGROUND</h2>
+            
+        <div class="first-row">
             <a href="">
                 <img src="image/twcs.png" alt="">
             </a>
-            <p>2008-2013: Tuguegarao West Central School -Primary</p>
-            <p>Luna Extension, Ugac Highway, Tuguegarao City, 3500</p>
-       </div>
-       <div class="box2">
+            <p>2008-2013: Tuguegarao West Central School -Primary </p>
+            <p>  Luna Extension, Ugac Highway, Tuguegarao City, 3500</p>
+        </div>    
+        <div class="first-row">
             <a href="">
                 <img src="image/kebing.png" alt="">
             </a>
             <p>2013-2016: Ke Bing School - Primary</p>
             <p>Burgos St 3500 Tuguegarao City, 3500</p>
         </div>
-        <div class="box2">
+        <div class="first-row">
             <a href="http://usl.edu.ph/">
                 <img src="image/usl.png" alt="">
             </a>
-            <p>2016-2021: University of Saint Louis Tuguegarao - Senior High & Junior High School</p>
-            <p>Luna Extension, Ugac Highway, Tuguegarao City, 3500</p>
+            <p>2016-2021: University of Saint Louis Tuguegarao - Senior High & Junior High School</p><span>
+            <p>Luna Extension, Ugac Highway, Tuguegarao City, 3500</p></span>
         </div>
-        <div class="box2">
+        <div class="second-row">
             <a href="https://csucarig.edu.ph/">
                 <img src="image/csu.png" alt="">
             </a>
             <p>2021-2022: Cagayan State University Carig Campus - College</p>
             <p>Carig Sur Tuguegarao City 3500</p>
         </div>
-        <div class="box2">
-            <p class="filler"></p>
-        </div>
-        <div class="box2 flex">
+        <div class="second-row">
             <a href="http://usl.edu.ph/">
                 <img src="image/usl.png" alt="">
             </a>
@@ -132,7 +131,7 @@
         <p>Learning how to code can improve your analytical thinking, problem-solving skill, creative thinking, computational thinking, and leadership-related skills.</p>
     </div>
     <p id="experience" class="filler"></p>
-    <div class="title">
+    <div class="title hidden">
         <h1>EXPERIENCES</h1>
     </div>
         <div class="first-year">
@@ -150,7 +149,9 @@
         <div class="title">
             <h1>PROJECTS</h1>
         </div>
-            <div></div>
+            <div>
+
+            </div>
             
     <audio>
         <source src="music/Clair de Lune.mp3" type="audio/mp3" autoplay loop></source>

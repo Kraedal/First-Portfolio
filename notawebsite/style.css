@@ -4,9 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-}
-html{
     scroll-behavior: smooth;
 }
 .flex{
@@ -389,14 +386,4 @@ html{
     font-size: 30px;
     margin-bottom: 1rem;
     text-align: left;
-}
-.hidden{
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all 1s;
-}
-.show{
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
 }

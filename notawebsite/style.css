@@ -6,6 +6,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 .flex{
     display: flex;
     gap: var(--gap,1rem);
@@ -47,8 +48,8 @@
 .navigation a:hover{
     color: var(--hover-color,rgb(201, 155, 195));
 }
-.navigation a.active{
-    color: var(--active-color,rgb(117, 89, 113));
+.navigation a:active{
+    color: var(--active-color,rgb(211, 167, 204));
 }
 .main-header .logo{
     padding: 0;
@@ -199,19 +200,20 @@
     margin: 2rem 1rem 1rem 1rem;
     text-align: center;
     background: none;
-    animation: progressBar 3s ease-in-out;
+    animation: progressBarValue 3s ease-in-out;
 }
 
 .skill progress::-webkit-progress-value {
-    background: rgb(180, 219, 255);
-    animation: progressBar 3s ease-in-out backwards;
+    background:  rgb(180, 219, 255);
+    animation: progressBarValue 3s ease-in-out backwards;
   }
 .skill progress::-webkit-progress-bar {
     background: rgb(235, 219, 232);
   }
-  @keyframes progressBar {
+  @keyframes progressBarValue {
     0% { width: 0; }
-    100% { width: 100%; }
+    100% { 
+        width: 100%; }
   }
  
 .skill h3{
@@ -310,13 +312,14 @@
     z-index: 1000;
  }
  .nothing img{
-    height: 50%;
+    height: 40%;
     width: 40%;
     max-width: 40%;
     border-radius: 5%;
     float: center;
     padding: 2rem;
     margin: 4rem;
+    display: grid;
  }
  .text p{
     font-family: 'Pacifico', cursive;
@@ -386,4 +389,58 @@
     font-size: 30px;
     margin-bottom: 1rem;
     text-align: left;
+}
+.output{
+    margin: 1rem;
+}
+.output img{
+    padding: 1rem;
+    margin: 1rem;
+    height: 100%;
+    width: 96%;
+}
+.output h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    color: var(--color,rgb(201, 155, 195));
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+    border-top: #d5b0d8 2px dashed;
+    border-bottom: #d5b0d8 2px dashed;
+    cursor: default;
+}
+.output p{
+    font-family: 'Pacifico', cursive;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: default;
+    padding: 0 2rem;
+}
+.holen{
+    padding: 0rem 1rem 0rem 1rem;
+    position: absolute;
+    
+}
+#Header{
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Pacifico', cursive;
+    font-size:48px ;
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    position: relative;
+}
+.hidden{
+    opacity: 0;
+    transition:all 0.6s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
